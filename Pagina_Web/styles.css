@@ -10,16 +10,23 @@ body{
 
 section{
     text-align: center;
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0,0,0,0.7);
     color: yellow;
 }
 
-
-.link{
+.neon {
+    color: black;
+    text-align: center;
+    font-size: 30px;
+    background-color: rgb(244, 0, 161);
     color: aqua;
 }
-.link:hover{
-    background-color: rgb(244, 0, 161);
+
+.neon:hover{
+    background-color: black;
+    padding: 0 22px;
+    border: 2px solid aqua;
+    color: aqua;
 }
 
 table, th, td {
@@ -101,11 +108,12 @@ nav a {
     font-size: 40px;
 }
 .aside ul {
-            text-align: left;
-        }
-        .aside li {
-            font-size: 25px;
-            list-style-type: none;
+    text-align: left;
+}
+
+.aside li {
+    font-size: 25px;
+    list-style-type: none;
         }
 
 .aside a {
