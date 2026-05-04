@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.nav{
+    color: black;
+    background-color:black;
+}
+
+li {
+    list-style: none;
+    margin-left: 18px;
+    background-color: blue;
+    padding: 6px 24px;
+}
+
+nav a {
+    color:black;
+    background-color: black;
+    padding: 12px 24px;
+    display: inline-block;
+    text-decoration: none;
+}
+.nav a:hover {
+    background-color: rgb(88, 33, 25);
+    padding: -2px 22px;
+    border: 2px solid black;
+    color: rgb(254 241 215);
+}
+
