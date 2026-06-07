@@ -14,19 +14,19 @@ section{
     color: yellow;
 }
 
-.neon {
-    color: black;
-    text-align: center;
-    font-size: 30px;
-    background-color: rgb(244, 0, 161);
-    color: aqua;
+a {
+    text-decoration: none;
 }
 
-.neon:hover{
+.neon{
     background-color: black;
     padding: 0 22px;
     border: 2px solid aqua;
     color: aqua;
+}
+
+.neon:hover{
+    background-color: rgb(54, 54, 54);
 }
 
 table, th, td {
@@ -37,29 +37,28 @@ table, th, td {
 }
 
 .nav {
+    display: flex;
+    justify-content: center;
+    list-style: none;
     color: black;
-    text-align: center;
-    font-size: 30px;
+    font-size: 35px;
     background-color: rgb(173, 120, 59);
 }
 
 .nav li {
-    color: black;
-    display: inline;
-    margin-right: 18px;
+    list-style: none;
 }
 
-nav a {
-    color:black;
-    background-color: black;
-    padding: 12px 24px;
+.nav a {
+    color: black;
     display: inline-block;
-    text-decoration: none;
+    padding: 10px 20px;
 }
+
 .nav a:hover {
     background-color: rgb(88, 33, 25);
-    padding: -2px 22px;
     border: 2px solid black;
+    padding: 8px 18px;
     color: rgb(254 241 215);
 }
 
@@ -107,6 +106,7 @@ nav a {
 .aside p {
     font-size: 40px;
 }
+
 .aside ul {
     text-align: left;
 }
@@ -114,7 +114,7 @@ nav a {
 .aside li {
     font-size: 25px;
     list-style-type: none;
-        }
+}
 
 .aside a {
     color:white;
@@ -122,7 +122,6 @@ nav a {
     font-size: 25px;
     padding: 12px 24px;
     display: inline-block;
-    text-decoration: none;
 }
 
 .aside a:hover {
