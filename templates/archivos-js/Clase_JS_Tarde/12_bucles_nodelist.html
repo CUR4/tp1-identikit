@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- HTMLCollection vs NodeList
+
+    NodeList:
+        Colección estática (por defecto, excepto en algunos casos como childNodes)
+        Puede contener cualquier tipo de nodo (elementos, texto, comentarios)
+        Métodos disponibles: forEach(), entries(), keys(), values() (en versiones modernas) 
+
+    Consejo: 
+        En código moderno, generalmente es preferible usar querySelectorAll 
+        (que devuelve NodeList) por su mayor flexibilidad y métodos disponibles.-->
+
+</head>
+
+<body>
+
+    <ul id="lista">
+        <li class="elemento">Elemento 1</li>
+        <!-- Comentario de prueba -->
+        <li class="elemento">Elemento 2</li>
+        Texto suelto de prueba
+        <li class="elemento">Elemento 3</li>
+    </ul>
+
+
+
+    <script>
+
+// Obtener NodeList (normalmente estática)
+        const itemsNode = document.querySelectorAll('.elemento');
+        const childNodes = document.getElementById('lista').childNodes;
+
+        console.log('NodeList (querySelectorAll):', itemsNode);
+        console.log('NodeList (childNodes):', childNodes);
+
+// Formas de iterar (NodeList moderno tiene forEach)
+
+        // 1. forEach (solo en NodeList de querySelectorAll)
+        console.log('forEach:');
+        itemsNode.forEach((item, index) => {
+            console.log(`${index}: ${item.textContent}`);
+            item.style.fontWeight = 'bold';
+        });
+
+        // 2. Bucle for...of
+        console.log('for...of:');
+        for (const item of itemsNode) {
+            console.log(item.textContent);
+        }
+
+        // 3. childNodes muestra TODOS los nodos
+        console.log('Recorriendo childNodes:');
+        childNodes.forEach(node => {
+            console.log(`Tipo: ${node.nodeType} - Contenido: ${node.textContent?.trim()}`);
+            // nodeType: 1=Elemento, 3=Texto, 8=Comentario
+        });
+
+    </script>
+</body>
+
+</html>

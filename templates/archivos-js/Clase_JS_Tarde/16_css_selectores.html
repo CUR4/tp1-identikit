@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    
+    <script>
+
+// Selectores CSS avanzados
+
+        // Básicos
+        '#header' // ID
+        '.menu-item' // Clase
+        'div' // Etiqueta
+
+        // Combinadores
+        'div p' // Descendiente
+        'div > p' // Hijo directo
+        'h2 + p' // Hermano adyacente
+        'h2 ~ p' // Hermanos generales
+
+        // Atributos
+        'input[type="text"]'
+        'a[href^="https"]' // Que empieza con
+        'img[src$=".jpg"]' // Que termina con
+        'div[class*="error"]' // Que contiene
+
+        // Pseudo-clases
+        'button:hover' // Al pasar el ratón
+        'tr:nth-child(odd)' // Filas impares de una tabla
+        'input:focus' // Input enfocado
+        'li:first-child' // Primer hijo
+        'a:not(.external)' // No tiene clase "external"
+        'p:empty' // Párrafos vacíos
+        'input:checked' // Inputs seleccionados
+        'input:disabled' // Inputs deshabilitados
+
+        // Pseudo-elementos
+        'p::first-line' // Primera línea de un párrafo
+        'p::first-letter' // Primera letra de un párrafo
+        'div::before' // Antes del contenido de un div
+        'div::after' // Después del contenido de un div
+        'span::selection' // Texto seleccionado dentro de un span
+
+        // Combinaciones
+        'div > p.highlight' // Párrafos destacados directos de un div
+        'ul li:first-child' // Primer elemento de una lista
+        'ul li:last-child' // Último elemento de una lista
+        'ul li:nth-child(2n)' // Elementos pares de una lista
+        'div p::first-letter' // Primera letra de un párrafo dentro de un div
+
+    </script>
+</body>
+</html>

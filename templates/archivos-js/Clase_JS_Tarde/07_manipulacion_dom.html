@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+// Creación y Manipulación de Nodos
+
+        // Crear elementos
+        const nuevoDiv = document.createElement('div');
+        const nuevoTexto = document.createTextNode('Hola mundo');
+
+
+        // Modificar elementos
+        elemento.textContent = 'Nuevo texto';
+        elemento.innerHTML = '<strong>Texto</strong> con HTML';
+        elemento.setAttribute('id', 'nuevoId');
+        elemento.classList.add('nueva-clase');
+        elemento.classList.remove('clase-vieja');
+        elemento.classList.toggle('clase-activa');
+        elemento.style.color = 'blue';
+        // Las propiedades CSS en JavaScript se escriben en camelCase
+        // Ejemplo: background-color (CSS) se convierte en backgroundColor (JavaScript)
+
+
+        // Insertar elementos
+        padre.appendChild(elemento); // Al final
+        padre.insertBefore(nuevo, referencia); // Antes de referencia
+        padre.prepend(elemento); // Al principio (moderno)
+        padre.append(elemento); // Al final (moderno)
+
+
+        // Clonar elementos
+        const clon = elemento.cloneNode(true); // true = copia profunda
+
+
+        // Eliminar elementos
+        elemento.remove(); // Moderno
+        padre.removeChild(elemento); // Tradicional
+
+
+        // Reemplazar elementos
+        padre.replaceChild(nuevo, viejo);
+
+    </script>
+</body>
+
+</html>

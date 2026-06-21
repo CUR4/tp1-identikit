@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- HTMLCollection vs NodeList
+
+    HTMLCollection:
+        Colección viva (se actualiza automáticamente si el DOM cambia)
+        Solo contiene elementos (no nodos de texto, comentarios, etc.)
+        Métodos disponibles: ninguno (solo acceso por índice o nombre) -->
+
+</head>
+
+<body>
+
+    <div class="item">Item 1</div>
+    <div class="item">Item 2</div>
+    <div class="item">Item 3</div>
+
+
+    <script>
+
+        // Obtener HTMLCollection (viva)
+        const itemsHTML = document.getElementsByClassName('item');
+        console.log('HTMLCollection:', itemsHTML);
+
+        // Formas de iterar (HTMLCollection no tiene forEach nativo)
+
+        // 1. Bucle for clásico
+        console.log('Bucle for:');
+        for (let i = 0; i < itemsHTML.length; i++) {
+            console.log(itemsHTML[i].textContent);
+            itemsHTML[i].style.color = 'red';
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<h1>Título de prueba</h1>
+<h1>Título de prueba 2</h1>
+
+<p>Hola mundo</p>
+
+<div></div>
+
+<ul>
+    <li>Elemento 1</li>
+    <li>Elemento 2</li>
+    <li>Elemento 3</li>
+</ul>
+
+<article></article>
+
+<body>
+
+    <script>
+        
+        const titulo = document.getElementsByTagName('h1');
+        console.log(titulo); // HTMLCollection 
+        titulo[1].style.color = 'red';
+
+        const parrafo = document.getElementsByTagName('p');
+        console.log(parrafo); // HTMLCollection
+        parrafo[0].innerText = 'Nuevo texto para el párrafo';
+
+        const div = document.querySelector('div');
+        console.log(div);
+        div.innerHTML = '<a href="index.html">Link de prueba</a>';
+
+        const lista = document.querySelectorAll('ul li');
+        console.log(lista); // NodeList
+        lista[0].style.color = 'blue';
+        lista[1].style.color = 'green';
+        lista[2].style.color = 'red';
+
+        const article = document.querySelector('article');
+        console.log(article); // NodeList
+        article.innerHTML = `
+            <h2>Título del post</h2>
+            <time datetime="2025-06-08">08 de junio de 2025</time><br>
+            <img src="https://via.placeholder.com/300x150" alt="Imagen de ejemplo" />
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <a href="#">Leer más</a>
+        `;
+
+        // Backsticks: 
+        // Windows: Presiona AltGr (la tecla junto a la barra espaciadora) 
+        // y luego la tecla de cierre de llave (}) dos veces.
+        // Mac: Usa la combinación Option (⌥) + .
+
+    </script>
+
+</body>
+
+</html>

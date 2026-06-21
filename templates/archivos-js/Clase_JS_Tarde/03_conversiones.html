@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+// Conversión de Tipos
+
+        // A String
+        String(123); // "123"
+        (123).toString(); // "123"
+
+
+        // A Number
+        Number("42"); // 42
+        parseInt("42px"); // 42
+        parseFloat("3.14"); // 3.14
+        +"123"; // 123 (operador unario +)
+
+
+        // A Boolean
+        Boolean(1); // true
+        Boolean(0); // false
+        Boolean(null); // false
+        Boolean(undefined); // false
+        !"texto"; // false (negación lógica)
+        !!"texto";  // true (doble negación)
+
+
+        // Conversión implícita
+
+        if ("texto") {
+            console.log("Esto se ejecuta porque 'texto' es truthy");
+        }
+
+        // Conversión implícita en operaciones
+
+        let resultado = "5" + 2; // "52" (concatenación de string)
+        resultado = "5" - 2; // 3 (string convertido a number)
+        resultado = "5" * 2; // 10 (string convertido a number)
+        resultado = "5" / 2; // 2.5 (string convertido a number)
+        console.log(resultado); // Imprime 2.5
+
+        // Conversión implícita en comparaciones
+
+        console.log("5" == 5); // true (comparación débil, string convertido a number)
+        console.log("5" === 5); // false (comparación estricta, tipos diferentes)
+        console.log("5" != 5); // false (comparación débil, string convertido a number)
+        console.log("5" !== 5); // true (comparación estricta, tipos diferentes)
+
+        // Conversión implícita en operaciones lógicas
+
+        console.log("texto" && 42); // 42 (el último valor truthy)
+        console.log(0 || "texto"); // "texto" (el primer valor truthy)
+        console.log(null || "valor por defecto"); // "valor por defecto" (null es falsy)
+
+        // Conversión implícita en funciones
+
+        function saludar(nombre) {
+            console.log("Hola, " + nombre);
+        }
+        saludar("Mundo"); // "Hola, Mundo"
+        saludar(42); // "Hola, 42" (número convertido a string)
+        saludar(); // "Hola, undefined" (undefined convertido a string)
+
+        // Conversión implícita en objetos
+
+        let obj = { nombre: "Juan" };
+        console.log(obj); // { nombre: "Juan" }
+        console.log(obj.toString()); // "[object Object]" (objeto convertido a string)
+        console.log(obj.valueOf()); // { nombre: "Juan" } (objeto convertido a su valor primitivo)
+
+        // Conversión implícita en arrays
+
+        let arr = [1, 2, 3];
+        console.log(arr); // [1, 2, 3]
+        console.log(arr.toString()); // "1,2,3" (array convertido a string)
+        console.log(arr.valueOf()); // [1, 2, 3] (array convertido a su valor primitivo)
+
+        // Conversión implícita en fechas
+
+        let fecha = new Date();
+        console.log(fecha); // Fecha actual
+        console.log(fecha.toString()); // "Fri Oct 06 2023 12:34:56 GMT+0200 (Central European Summer Time)" (fecha convertida a string)
+        console.log(fecha.valueOf()); // 1696595696000 (fecha convertida a su valor primitivo en milisegundos)
+    
+    </script>
+</body>
+
+</html>

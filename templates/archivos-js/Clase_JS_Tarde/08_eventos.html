@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+// Eventos del DOM
+    
+        // Agregar Eventos
+
+        // Método recomendado (puede múltiples listeners)
+        elemento.addEventListener('evento', manejador);
+
+        // Métodos antiguos (solo un listener)
+        elemento.onclick = function () { /*...*/ };
+        elemento.onclick = manejador; // Sobrescribe el anterior
+
+        // Remover Eventos
+        
+        elemento.removeEventListener('evento', manejador); // Debe ser la misma función
+
+
+// Tipos de Eventos Comunes
+        
+        // Eventos del Ratón
+        'click'      // Click simple
+        'dblclick'   // Doble click
+        'mousedown'  // Botón presionado
+        'mouseup'    // Botón liberado
+        'mouseover'  // Entra en el elemento
+        'mouseout'   // Sale del elemento
+        'mousemove'  // Se mueve dentro del elemento
+        'contextmenu' // Click derecho
+        
+        // Eventos del Teclado
+        'keydown'    // Tecla presionada
+        'keyup'      // Tecla liberada
+        'keypress'   // Tecla presionada (obsoleto)
+
+        // Eventos de Formularios
+        'submit'     // Envío de formulario
+        'change'     // Valor cambiado (input, select, textarea)
+        'input'      // Valor cambiado (en tiempo real)
+        'focus'      // Elemento enfocado
+        'blur'       // Elemento pierde foco
+        'invalid'    // Validación fallida
+
+        // Eventos de Ventana
+        'load'       // Página cargada
+        'DOMContentLoaded' // DOM cargado (sin esperar recursos)
+        'resize'     // Ventana redimensionada
+        'scroll'     // Scroll realizado
+        'beforeunload' // Antes de cerrar la página
+
+        // Eventos Multimedia
+        'play'       // Medio iniciado
+        'pause'      // Medio pausado
+        'ended'      // Medio terminado
+
+
+// Objeto Evento y sus Propiedades
+
+        elemento.addEventListener('click', function (e) {
+            // Propiedades comunes
+            e.type;           // Tipo de evento ('click')
+            e.target;         // Elemento que originó el evento
+            e.currentTarget;  // Elemento con el listener (igual a 'this')
+
+            // Para eventos de ratón
+            e.clientX;        // Coordenada X en la ventana
+            e.clientY;        // Coordenada Y en la ventana
+            e.pageX;          // Coordenada X en el documento
+            e.pageY;          // Coordenada Y en el documento
+            e.button;         // Botón presionado (0=izq, 1=medio, 2=der)
+
+            // Para eventos de teclado
+            e.key;            // Tecla presionada ('Enter', 'a', etc.)
+            e.code;           // Código físico de la tecla ('KeyA')
+            e.ctrlKey;        // Ctrl presionado (booleano)
+            e.shiftKey;       // Shift presionado
+            e.altKey;         // Alt presionado
+            e.metaKey;        // Cmd (Mac) o Win (Windows) presionado
+
+            // Métodos importantes
+            e.preventDefault();  // Evita comportamiento por defecto
+            e.stopPropagation(); // Detiene la propagación
+        });
+
+// Delegación de Eventos
+
+        // Escuchar eventos en un padre para elementos hijos
+        document.getElementById('lista').addEventListener('click', function (e) {
+            if (e.target.matches('li.item')) {
+                console.log('Click en item:', e.target);
+            }
+        });
+
+
+// Eventos Personalizados
+
+        // Crear evento
+        const evento = new CustomEvent('miEvento', {
+            detail: { mensaje: 'Hola mundo' },
+            bubbles: true,
+            cancelable: true
+        });
+
+
+        // Disparar evento
+        elemento.dispatchEvent(evento);
+
+
+        // Escuchar evento
+        elemento.addEventListener('miEvento', function (e) {
+            console.log(e.detail.mensaje); // "Hola mundo"
+        });
+
+
+// Patrones Comunes
+        
+        // Ejecutar código cuando el DOM está listo
+
+        document.addEventListener('DOMContentLoaded', function () {
+            // Tu código aquí
+        });
+
+
+        // Prevenir envío de formulario
+
+        formulario.addEventListener('submit', function (e) {
+            e.preventDefault();
+            // Validar y enviar manualmente
+        });
+
+
+        // Evento de tecla específica
+
+        input.addEventListener('keydown', function (e) {
+            if (e.key === 'Enter') {
+                console.log('Enter presionado');
+            }
+        });
+
+
+        // One - time event(solo se ejecuta una vez)
+
+        elemento.addEventListener('click', function manejador(e) {
+            console.log('Solo una vez!');
+            e.currentTarget.removeEventListener(e.type, manejador);
+        });
+
+    </script>
+</body>
+
+</html>

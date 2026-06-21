@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+// Funciones en JavaScript
+
+        // 1. Declaración de Funciones
+
+        function nombre() {
+            // ...código de la función...
+        }
+
+        // 2. Expresiones
+
+        const suma = function (a, b) {
+            return a + b;
+        };
+
+        // 3. Función flecha (ES6 +)
+
+        const suma2 = (a, b) => {
+            return a + b;
+        };
+
+        // Return implícito
+        const suma3 = (a, b) => a + b;
+
+        // 4. Funciones Anónimas
+
+        const funcionAnonima = function () {
+            console.log('Soy una función anónima');
+        };
+
+        const funcionAnonimaFlecha = () => {
+            console.log('Soy una función anónima flecha');
+        };
+
+// Parámetros y Argumentos
+
+        // Cuando se define una función como la siguiente:
+
+        function saludar(nombre = 'Usuario') {
+            return `Hola ${nombre}`;
+        }
+
+        console.log(saludar('Juan')); // "Hola Juan"
+        console.log(saludar()); // "Hola Usuario"
+
+        // El parámetro nombre funciona como una variable local dentro de la función.
+        // Si llamas a saludar('Juan'), el valor 'Juan' se asigna a la variable nombre 
+        // y puedes usarlo dentro de la función, por ejemplo en el template string ${ nombre }.
+
+        // Si no pasas ningún argumento, nombre toma el valor por defecto 'Usuario'.
+        // Esta variable solo existe dentro del alcance de la función y no fuera de ella.
+
+
+        function saludar(nombre = 'Usuario', apellido = 'Apellido') {
+            return `Hola ${nombre} ${apellido}`;
+        }
+
+        console.log(saludar('Juan', 'Pérez')); // "Hola Juan Pérez"
+
+// Funciones Especiales
+
+        // Funciones Anónimas
+
+        setTimeout(function () {
+            console.log('Ejecutado después de 1s');
+        }, 1000);
+
+
+        // Funciones Autoejecutables (IIFE)
+
+        (function () {
+            console.log('Se ejecuta inmediatamente');
+        })();
+
+
+        // Con parámetros
+        (function (a, b) {
+            console.log(a + b);
+        })(5, 3);
+
+
+// Funciones Async / Await
+
+        async function obtenerDatos() {
+            const respuesta = await fetch('https://api.example.com/data');
+            const datos = await respuesta.json();
+            return datos;
+        }
+
+
+// Callbacks
+
+        function procesarDatos(datos, callback) {
+            // Procesamiento...
+            const resultado = datos.toUpperCase();
+            callback(resultado);
+        }
+
+        procesarDatos('hola', function (res) {
+            console.log(res); // "HOLA"
+        });
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+
+    <h1>Título de prueba</h1>
+    <h1>Título de prueba 2</h1>
+
+    <p>Hola mundo</p>
+
+    <div></div>
+
+    <ul>
+        <li>Elemento 1</li>
+        <li>Elemento 2</li>
+        <li>Elemento 3</li>
+    </ul>
+
+    <article></article>
+
+
+    <script>
+
+        const article = document.querySelector('article');
+        article.innerHTML = `
+            <h2>Título del post</h2>
+            <time datetime="2025-06-08">08 de junio de 2025</time><br>
+            <img src="https://via.placeholder.com/300x150" alt="Imagen de ejemplo" />
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <a href="#">Leer más</a>
+        `;
+
+    </script>
+</body>
+
+</html>

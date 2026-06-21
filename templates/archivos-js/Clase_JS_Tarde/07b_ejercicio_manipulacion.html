@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            background-color: rgb(241, 68, 68);
+            border-radius: 1rem;
+            padding: 1rem;
+            box-shadow: 1rem 1rem 2rem rgba(0, 0, 0, 0.1);
+            width: 50%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <script>
+
+        const nuevoDiv = document.createElement('div');
+        nuevoDiv.innerHTML = `
+             <h1>Título de prueba</h1>
+             <p>Hola mundo</p>
+             <a href="index.html">Volver al inicio</a>
+         `;
+        nuevoDiv.classList.add('container');
+        document.body.appendChild(nuevoDiv);
+        
+        const parrafo = nuevoDiv.querySelector('p');
+        parrafo.innerText = 'Texto cambiado';
+
+    </script>
+</body>
+
+</html>

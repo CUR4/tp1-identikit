@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Playlist</title>
+        <link rel="icon" href="../../imagenes/Icono.png">
+        <link rel="stylesheet" href="../Pagina_Web/styles.css">    
+    </head>
+    <style>
+    
+    </style>
+
+    <body>
+        <ul class="nav">
+            <li><a href="../Pagina_Web/SobreMi.html">Sobre Mi</a></li>
+            <li><a href="../Pagina_Web/Tareas.html">Tareas</a></li>
+            <li><a href="../Questionario/Nivel_1.html">Questionario</a></li>
+            <li><a href= "../Playlist/Menu_Flexbox.html">Playlist</a></li>
+        </ul>
+
+        <div class="conteiner">
+            <div class="aside">
+                <h1>Act 1</h1>
+                <ul>
+                    <li><a href="#" onclick="mostrarVideo('4vXArJnemSA', 'Eating Rats')">Eating Rats</a></li>
+                    <li><a href="Part_1/Flush.html">Flush</a></li>
+                    <li><a href="Part_1/Chumbucket Kitty.html"> Chumbucket Kitty</a></li>
+                    <li><a href="Part_1/Crystalline Dreams.html">Crystalline Dreams</a></li>
+                    <li><a href="Part_1/Them Kitty Bones.html">Them Kitty Bones</a></li>
+                    <li><a href="Part_1/Thorbbing King.html">Thorbbing King</a></li>
+                    <li><a href="Part_1/Guillotina.html">Guillotina</a></li>
+                </ul>
+                <h1>Act 2</h1>
+                <ul>
+                    <li><a href="Part_2/Lonesome Road.html">Lonesome Road</a></li>
+                    <li><a href="Part_2/Alone In The Dark.html">Alone In The Dark</a></li>
+                    <li><a href="Part_2/Feline Invader.html">Feline Invader</a></li>
+                    <li><a href="Part_2/Down With The Devil.html">Down With The Devil</a></li>
+                    <li><a href="Part_2/So High.html">So High</a></li>
+                    <li><a href="Part_2/Crazy Days.html"> Crazy Days</a></li>
+                    <li><a href="Part_2/Brush Your Teeth.html">Brush Your Teeth</a></li>
+                </ul>
+            </div>
+
+            <div class="main">
+                <h1 id="titulo">¡Bienvenido a la playlist del videojuego Mewgenics! Espero que te guste, a medida que pase el tiempo se iran agregando canciones de actos</h1>
+                <div id="contenido">
+                    <img src="../../imagenes/iNICIO.jpg" width="1000">
+                </div>
+            </div>
+        </div>
+    
+        <script>
+            function mostrarVideo(videoID, titulo)
+            {
+                document.getElementById("titulo").textContent = titulo;
+                document.getElementById("contenido").innerHTML = `
+                <iframe
+                    width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/${videoID}"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>`;
+            }
+        </script>
+    </body>
+</html>

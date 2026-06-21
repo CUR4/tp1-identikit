@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        .modal-oculto {
+            display: none;
+        }
+
+        .mostrar-modal {
+            display: block;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.4);
+        }
+
+    </style>
+</head>
+<body>
+
+    <button>Click me</button>
+
+    <script>
+
+        const boton = document.querySelector('button');
+        const modal = document.createElement('div');
+        modal.classList.add('modal-oculto');
+        modal.innerHTML = `
+            <div class="modal-content">
+                <span class="cerrar">&times;</span>
+                <p>Hola, soy un modal!</p>
+            </div>
+        `;
+        document.body.appendChild(modal);
+
+        function mostrarModal() {
+            modal.classList.remove('modal-oculto');
+            modal.classList.add('mostrar-modal');
+
+            const cerrarModal = modal.querySelector('.cerrar');
+            cerrarModal.addEventListener('click', function() {
+                modal.classList.remove('mostrar-modal');
+                modal.classList.add('modal-oculto');
+            });
+        }
+        
+    </script>
+</body>
+</html>

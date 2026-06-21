@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+// Selectores del DOM
+        
+// Métodos tradicionales
+
+        // Seleccionar por ID
+        document.getElementById('miId');
+
+
+        // Seleccionar por clase (HTMLCollection)
+        document.getElementsByClassName('miClase');
+
+
+        // Seleccionar por tag (HTMLCollection)
+        document.getElementsByTagName('div');
+
+
+        // Seleccionar por name (NodeList)
+        document.getElementsByName('username');
+
+        // Seleccionar los HTMLCollection y Nodelists individualmente (por índice), 
+        // para poder aplicarles estilos: 
+        // elemento[0].style.color = 'red';
+
+
+// Métodos modernos(querySelector)
+
+        // Seleccionar el primer elemento que coincida
+        document.querySelector('.clase'); // Por clase
+        document.querySelector('#id'); // Por ID
+        document.querySelector('div'); // Por etiqueta
+        document.querySelector('[data-atributo]'); // Por atributo
+
+
+        // Seleccionar todos los elementos que coincidan (NodeList)
+        document.querySelectorAll('.clase'); // Por clase
+        document.querySelectorAll('div.highlight'); // Por clase y etiqueta
+        document.querySelectorAll('input[type="text"]'); // Por atributo
+        document.querySelectorAll('ul li'); // Por etiqueta dentro de una lista
+        document.querySelectorAll('p'); // Todos los párrafos
+        
+    </script>
+</body>
+
+</html>
