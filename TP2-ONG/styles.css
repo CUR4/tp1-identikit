@@ -4,76 +4,81 @@
     box-sizing: border-box;
 }
 
-ul {
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+.topnav {
     display: flex;
-    height: 50px;
-    background-color: chartreuse;
-    justify-content: end;
+    width: 100%;
+    background-color: rgb(126, 67, 19);
     align-items: center;
-    position: relative;
-    flex-wrap: wrap;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
 }
 
-li {
-    list-style: none;
-    margin-left: 12px;
-    background-color: blue;
-    padding: 6px 24px;
-    height: 36px;
-}
-
-a {
+.topnav a {
+    display: flex;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    padding: 14px 16px;
     text-decoration: none;
+    font-size: 20px;
 }
 
-li:nth-child(1) {
-    position: absolute;
-    left: 12px;
-    margin-left: 0;
-    padding: 0;
+.topnav a:hover {
+    background-color: rgb(126, 67, 19);
+    border: 2px solid rgb(223, 136, 6);
+}
+.topnav .icon {
+    display: none;
 }
 
+/* Estilos del contenido principal */
 main {
     display: flex;
+    height: 900px;
+    margin-top: 75px;
 }
 
 .uno {
-    height: 300px;
     width: 50%;
+    height: 300px;
     background-color: yellow;
 }
 
-
 .dos {
-    height: 300px;
     width: 50%;
+    height: 300px;
     background-color: rgb(255, 0, 179);
 }
-
-@media (max-width: 767px) {
-
-    ul {
-        background-color: red;
+@media screen and (max-width: 765px) {
+    .topnav {
         flex-direction: column;
-        height: 200px;
+        align-items: flex-start;
     }
-
-    img {
+    .topnav a:not(:first-child):not(.icon) {
         display: none;
     }
-
+    .topnav a.icon {
+        display: flex;
+        position: absolute;
+        right: 0;
+        top: 14px;
+    }
+    .topnav.responsive a:not(.icon) {
+        display: flex;
+        width: 100%;
+        justify-content: flex-start;
+    }
     main {
         flex-direction: column;
     }
 
-    .uno, .dos {
-        width: 100vw;
+    .uno,.dos {
+        width: 100%;
     }
-
-}
-
-@media (min-width: 768px) and (max-width: 1023px) {
-  body {
-    background-color: lightgreen;
-  }
 }
