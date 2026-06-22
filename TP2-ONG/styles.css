@@ -157,9 +157,9 @@ main {
     width: 100%;
     max-width: 250px;
     height: auto;
-    object-fit: contain
+    object-fit: contain;
     display: block;
-}
+    }
 
 @media screen and (max-width: 765px) {
     .topnav {
