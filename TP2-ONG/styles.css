@@ -42,12 +42,12 @@ body {
 }
 
 .cara {
-    margin-top: 75px; 
+    margin-top: 75px;
     width: 100%;
 }
 
 .slides {
-    height: 60vh; 
+    height: 100vh; 
     position: relative;
     overflow: hidden;
     background-color: #000;
@@ -127,24 +127,32 @@ body {
 main {
     display: flex;
     width: 100%;
+    border: 10px;
 }
 
 .uno {
-    width: 50%;
+    width: 70%;
     min-height: 300px;
     background-color: yellow;
-    padding: 20px;
+    border: 10px;
+    border: 2px solid black;
+    padding: 60px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     text-align: center; 
 }
-
+.uno p{
+    font-size: 18px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
 .dos {
-    width: 50%;
+    width: 30%;
     min-height: 300px;
     background-color: rgb(126, 67, 19);
+    border: 10px;
+    border: 2px solid black;
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -154,8 +162,8 @@ main {
 }
 
 .dos img {
+    border: 2px solid black;
     width: 100%;
-    max-width: 250px;
     height: auto;
     object-fit: contain;
     display: block;
