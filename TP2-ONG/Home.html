@@ -1,21 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Home </title>
-<link rel="icon" href="imagenes/Icono.png">
-<meta charset="utf-8">
-<link rel="stylesheet" href="styles.css">
+    <title>Home</title>
+    <link rel="icon" href="../imagenes/Proyecto Arca Logo.png">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styles.css">
 </head>
-<style>
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-}
-</style>
 <body>
     <header>
         <nav class="topnav" id="myTopnav">
-            <img src="../imagenes/Proyecto Arca Logo.png"alt="Proyecto Arca"style="width:75px;height:75px;"></a>
+            <img src="../imagenes/Proyecto Arca Logo.png" alt="Proyecto Arca" style="width:75px;height:75px;">
             <a href="Home.html">Home</a>
             <a href="Landing_Page.html">Adopciones</a>
             <a href="Nuestros_Proyectos.html">Nuestros Proyectos</a>
@@ -24,24 +18,34 @@ body {
         </nav>
     </header>
 
-    <div class="cara">
-        <h1>¡Bienvenidos a Proyecto Arca!</h1>
-    </div>
-    <main style=" height: 900px;">
+    <section class="cara">
+        <div class="slides">
+            <img src="../imagenes/perros en refugio.jpg" alt="Animales Proyecto Arca" class="active">
+            <img src="../imagenes/Caballos cuidados.png" alt="Refugio de animales">
+            <img src="../imagenes/Gatito.jpg" alt="Adopción responsable">
+            <img src="../imagenes/señor arca.jpg" alt="Ayudanos a ayudar">
+
+            <button class="botonAnt" onclick="anterior()"> ◀️ </button>
+            <button class="botonSig" onclick="siguiente()"> ▶️ </button>
+
+            <div class="absolute">
+                <h1>¡Bienvenidos a Proyecto Arca!</h1>
+                <p>Hogar y oportunidades a nuestros compañeros animales.</p>
+                <br>
+                <a href="Landing_Page.html" class="btn-cta">Dales una segunda oportunidad</a>
+            </div>
+        </div>
+    </section>
+
+    <main>
         <div class="uno">Descripcion de imagen y relacon con la campaña</div>
-        <div class="dos">Imagenes estilizadas</div>
+        <div class="dos">
+            <img src="../imagenes/GatoKam.jpg">
+            <img src="../imagenes/Caballo tirando">
+            <img src="../imagenes/perro vacunado.jpg">
+        </div>
     </main>
 
-    <script>
-function myFunction() {
-    var x = document.getElementById("myTopnav");
-
-    if (x.className === "topnav") {
-        x.className += " responsive";
-    } else {
-        x.className = "topnav";
-    }
-}
-</script>
+    <script src="script.js"></script>
 </body>
 </html>
