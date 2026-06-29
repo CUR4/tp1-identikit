@@ -33,7 +33,7 @@ function anterior() {
     activarImagen(posicion);
 }
 
-// 3. Logica de CALCULADORA 
+//LÓGICA CALCULADORA
 function donar() {
     // 1. Contenedor div de la calculadora
     let nuevoDiv = document.createElement("div");
@@ -118,7 +118,7 @@ function donar() {
     });
 }
 
-// 4. Inicio automatico
+// 4. INICIO AUTOMATICO
 document.addEventListener("DOMContentLoaded", function() {
     // Si entramos a la Landing Page (cuyo título es "Donaciones"), abre la calculadora automáticamente
     if (document.title === "Donaciones") {
@@ -126,7 +126,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 });
 
-// Logica ACORDION
+// LÓGICA ACORDION
 function conmutarProyecto(botonElemento) {
     // Obtenemos el elemento li padre del botón presionado
     let itemPadre = botonElemento.parentElement;
@@ -145,5 +145,21 @@ function conmutarProyecto(botonElemento) {
         // Abrimos el proyecto seleccionado
         itemPadre.classList.add("activo");
         cajaContenido.style.display = "block";
+    }
+}
+// LÓGICA DE CAPTURA DEL FORMULARIO (Suscribite)
+function inicializarFormularioSuscripcion() {
+    const form = document.querySelector('form');
+    
+    // Verificamos primero si el formulario existe en la página actual
+    if (form) {
+        form.addEventListener('submit', (e) => {
+            e.preventDefault(); // Evita que la página se recargue
+
+            const formData = new FormData(form);
+            const datos = Object.fromEntries(formData.entries());
+
+            console.log('Datos enviados:', datos);
+        });
     }
 }

@@ -1,10 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Home</title>
+    <title>Suscribite - Proyecto Arca</title>
     <link rel="icon" href="../imagenes/Proyecto Arca Logo.png">
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .contenedor-formulario {
+            margin-top: 75px;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center; 
+            flex: 1; 
+        }
+
+        form {
+            border: 2px solid rgb(126, 67, 19);
+            border-radius: 8px;
+            padding: 30px;
+            max-width: 500px;
+            width: 100%;
+            color: azure;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -14,11 +41,42 @@
             <a href="Landing_Page.html">Donacion</a>
             <a href="Nuestros_Proyectos.html">Nuestros Proyectos</a>
             <a href="Suscribite.html">Suscribite</a>
-            <a href="javascript:void(0);" class="icon" onclick="myFunction()">☰</a>
         </nav>
     </header>
 
-    <main> 
+    <main class="contenedor-formulario" style="background-image:url(../imagenes/abrigo_invierno.jpg) ;">
+        <form style="background-image: url(../imagenes/mewgenics\ fondo.jpg);">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre"><br><br>
+
+            <label for="apellido">Apellido:</label>
+            <input type="text" id="apellido" name="apellido"><br><br>
+
+            <label for="email">Dirección de e-mail:</label>
+            <input type="email" id="email" name="email"><br><br>
+
+            <label for="edad">Edad:</label>
+            <input type="number" id="edad" name="edad"><br><br>
+
+            <span>Lenguaje Favorito:</span>
+            <input type="radio" id="html" value="html" name="lenguaje">
+            <label for="html">HTML</label>
+            <input type="radio" id="css" value="css" name="lenguaje">
+            <label for="css">CSS</label><br><br>
+
+            <label for="nacionalidad">Seleccione su nacionalidad:</label>
+            <select id="nacionalidad" name="nacionalidad">
+                <option value="Argentina">💙 Argentina</option>
+                <option value="Chile">Chile</option>
+                <option value="Brasil">Brasil</option>
+            </select> <br><br>
+
+            <label for="mensaje">Mensaje:</label><br>
+            <textarea id="mensaje" name="message" style="width:100%; height:80px; resize: none;"></textarea><br><br>
+
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Borrar formulario">
+        </form>
     </main>
 
     <footer>
@@ -27,6 +85,7 @@
             <p>Hogar y oportunidades a nuestros compañeros animales.</p>
         </div>
     </footer>
+
     <script src="script.js"></script>
 </body>
 </html>
