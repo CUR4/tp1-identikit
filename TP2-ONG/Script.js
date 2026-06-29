@@ -120,14 +120,14 @@ function donar() {
 
 // 4. INICIO AUTOMATICO
 document.addEventListener("DOMContentLoaded", function() {
-    // Si entramos a la Landing Page (cuyo título es "Donaciones"), abre la calculadora automáticamente
+    // Si entramos a la Landing Page, abre la calculadora automáticamente
     if (document.title === "Donaciones") {
         donar();
     }
 });
 
 // LÓGICA ACORDION
-function conmutarProyecto(botonElemento) {
+function acordeonProyectos(botonElemento) {
     // Obtenemos el elemento li padre del botón presionado
     let itemPadre = botonElemento.parentElement;
     // Buscamos la caja de contenido interna de ese proyecto específico
