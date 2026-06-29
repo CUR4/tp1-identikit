@@ -41,6 +41,28 @@ body {
     display: none;
 }
 
+footer {
+    width: 100%;
+    background-color: gray;
+    color: black;
+    padding: 20px 0;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 0 20px;
+}
+
+.footer-content p {
+    font-size: 14px;
+    opacity: 0.9;
+}
+
 .cara {
     margin-top: 75px;
     width: 100%;
@@ -185,31 +207,8 @@ main {
     max-width: 100%;
 }
 
-footer {
-    width: 100%;
-    background-color: gray;
-    color: black;
-    padding: 20px 0;
-    margin-top: auto;
-}
-
-.footer-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    padding: 0 20px;
-}
-
-.footer-content p {
-    font-size: 14px;
-    opacity: 0.9;
-}
-
 .Calculadora {
-    background-color: rgba(18, 85, 185, 0.95);
+    background-color: rgba(126, 67, 19);
     color: white;
     width: 100%;
     max-width: 500px;

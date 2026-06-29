@@ -35,16 +35,16 @@ function anterior() {
 
 // 3. Logica de CALCULADORA 
 function donar() {
-    // 1. Creamos el contenedor div de la calculadora
+    // 1. Contenedor div de la calculadora
     let nuevoDiv = document.createElement("div");
 
     // 2. Cargamos la estructura HTML interna de la calculadora
     nuevoDiv.innerHTML = `<h1>Calculadora de Impacto</h1>
-                            <p>Calculá cuántos kits escolares podés donar.</p>
+                            <p>Calculá cuántos kits de rehabilitación animal podés donar.</p>
                             
-                            <button class="montoFijo" value="5000">$5000</button>
-                            <button class="montoFijo" value="10000">$10000</button>
-                            <button class="montoFijo" value="20000">$20000</button>
+                            <button class="montoFijo" value="5000">$5.000</button>
+                            <button class="montoFijo" value="10000">$10.000</button>
+                            <button class="montoFijo" value="20000">$20.000</button>
                             <input type="number" id="montoDonacion" placeholder="Ingresá un monto">
                             <button id="calcularImpacto">Calcular</button>
                             

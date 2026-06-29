@@ -12,9 +12,13 @@
             background-size: cover;
             background-attachment: fixed;
             background-position: center;
-            height: 100vh; /* Asegura que el body ocupe toda la pantalla para centrar la calculadora */
             margin: 0;
-            position: relative;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        footer{
+            margin-top: auto;
         }
     </style>
 </head>
@@ -26,9 +30,14 @@
             <a href="Landing_Page.html">Donacion</a>
             <a href="Nuestros_Proyectos.html">Nuestros Proyectos</a>
             <a href="Sobre_Nosotros.html">Sobre Nosotros</a>
-            <a href="javascript:void(0);" class=\"icon\" onclick="myFunction()">☰</a>
         </nav>
     </header>
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2026 Proyecto Arca. Todos los derechos reservados.</p>
+            <p>Hogar y oportunidades a nuestros compañeros animales.</p>
+        </div>
+    </footer>
 
     <script src="script.js"></script>
 </body>
