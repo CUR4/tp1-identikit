@@ -13,7 +13,7 @@ body {
     display: flex;
     width: 100%;
     background-color: rgb(126, 67, 19);
-    align-items: center;
+    justify-content: center;
     position: fixed;
     top: 0;
     left: 0;
@@ -26,15 +26,15 @@ body {
     justify-content: center;
     align-items: center;
     padding: 23px 20px;
-    font-size: 24px;
+    font-size: 35px;
     text-decoration: none;
 }
 
 .topnav a:hover {
     background-color: rgb(126, 67, 19);
     box-shadow: inset 0 0 0 2px rgb(223, 136, 6);
-    border: 2px solid rgb(223, 136, 6);
-    padding: 12px 14px;
+    border: 1px solid rgb(223, 136, 6);
+    padding: 22px 19px;
 }
 
 .topnav .icon {
@@ -130,43 +130,59 @@ main {
     border: 10px;
 }
 
-.uno {
-    width: 70%;
-    min-height: 300px;
-    background-color: yellow;
-    border: 10px;
-    border: 2px solid black;
-    padding: 60px;
+.contenedor-labor {
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center; 
-}
-.uno p{
-    font-size: 18px;
-    margin-top: 30px;
-    margin-bottom: 30px;
-}
-.dos {
-    width: 30%;
-    min-height: 300px;
-    background-color: rgb(126, 67, 19);
-    border: 10px;
-    border: 2px solid black;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
+    width: 100%;
+    background-color: rgb(223, 136, 6); 
+    padding: 40px 20px;
+    gap: 30px; 
 }
 
-.dos img {
-    border: 2px solid black;
+.bloque-presentacion {
     width: 100%;
-    height: auto;
-    object-fit: contain;
-    display: block;
+    max-width: 900px; 
+    background-color: #fffdec; 
+    border: 2px solid rgb(126, 67, 19); 
+    border-radius: 8px;
+    padding: 30px;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; 
+}
+
+.texto-presentacion {
+    width: 100%;
+    text-align: center;
+}
+
+.texto-presentacion h2 {
+    font-size: 32px;
+    color: black;
+    margin-bottom: 15px;
+}
+
+.texto-presentacion p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #333;
+}
+
+.imagen-presentacion {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1px;
+}
+
+.imagen-presentacion img {
+    width: auto;             
+    height: auto;            
+    max-width: 100%;
 }
 
 footer {
@@ -191,6 +207,59 @@ footer {
     font-size: 14px;
     opacity: 0.9;
 }
+
+.Calculadora {
+    background-color: rgba(18, 85, 185, 0.95);
+    color: white;
+    width: 100%;
+    max-width: 500px;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+}
+
+.Calculadora h1 {
+    font-size: 28px;
+    margin-bottom: 5px;
+}
+
+.Calculadora input {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+}
+
+.Calculadora button {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: rgb(223, 136, 6);
+    color: white;
+    font-size: 16px;
+    transition: background 0.3s;
+}
+
+.Calculadora button:hover {
+    background-color: rgb(126, 67, 19);
+}
+
+#cerrar {
+    display: none;
+}
+
 @media screen and (max-width: 765px) {
     .topnav {
         flex-direction: column;
@@ -215,11 +284,6 @@ footer {
     
     main {
         flex-direction: column;
-    }
-
-    .uno, .dos {
-        width: 100%;
-        height: auto;
     }
 
     .absolute h1 {

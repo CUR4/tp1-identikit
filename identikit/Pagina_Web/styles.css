@@ -37,9 +37,9 @@ table, th, td {
 
 .nav {
     display: flex;
+    width: 100%;
     justify-content: center;
-    list-style: none;
-    color: black;
+    position: fixed;
     font-size: 35px;
     background-color: rgb(173, 120, 59);
 }
