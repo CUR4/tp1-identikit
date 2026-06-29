@@ -125,3 +125,25 @@ document.addEventListener("DOMContentLoaded", function() {
         donar();
     }
 });
+
+// Logica ACORDION
+function conmutarProyecto(botonElemento) {
+    // Obtenemos el elemento li padre del botón presionado
+    let itemPadre = botonElemento.parentElement;
+    // Buscamos la caja de contenido interna de ese proyecto específico
+    let cajaContenido = itemPadre.querySelector(".contenido-desplegable");
+
+    // Si ya está abierto, lo cerramos
+    if (itemPadre.classList.contains("activo")) {
+        itemPadre.classList.remove("activo");
+        cajaContenido.style.display = "none";
+    } else {
+        // OPCIONAL: Descomentá las siguientes 4 líneas si querés que al abrir uno se cierren los demás automáticamente:
+        // document.querySelectorAll('.item-proyecto').forEach(item => item.classList.remove('activo'));
+        // document.querySelectorAll('.contenido-desplegable').forEach(caja => caja.style.display = 'none');
+
+        // Abrimos el proyecto seleccionado
+        itemPadre.classList.add("activo");
+        cajaContenido.style.display = "block";
+    }
+}

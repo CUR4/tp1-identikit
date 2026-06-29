@@ -1,22 +1,228 @@
-3 proyectos ficticios formato blog
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Home</title>
+    <title>Nuestros Proyectos</title>
     <link rel="icon" href="../imagenes/Proyecto Arca Logo.png">
     <meta charset="utf-8">
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .contenedor-labor{
+            margin-top: 75px;
+        }
+        /* ACORDEÓN DE PROYECTOS*/
+        .lista-proyectos {
+            list-style: none;
+            padding: 0;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .item-proyecto {
+            width: 100%;
+            background-color: #fffdec; 
+            border: 2px solid rgb(126, 67, 19); 
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .titulo-proyecto {
+            width: 100%;
+            background: none;
+            border: none;
+            text-align: left;
+            font-size: 24px;
+            font-weight: bold;
+            color: rgb(126, 67, 19);
+            padding: 20px 30px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background 0.3s;
+        }
+
+        .titulo-proyecto:hover {
+            background-color: rgba(223, 136, 6, 0.1);
+        }
+
+        .titulo-proyecto::after {
+            content: '▼';
+            font-size: 16px;
+            transition: transform 0.3s;
+        }
+
+        .item-proyecto.activo .titulo-proyecto::after {
+            transform: rotate(180deg);
+        }
+
+        .contenido-desplegable {
+            display: none; 
+            padding: 0 30px 30px 30px;
+            animation: deslizar 0.3s ease-out;
+        }
+
+        .cuerpo-proyecto {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+            flex-wrap: wrap; 
+        }
+
+        .texto-proyecto {
+            flex: 1;
+            min-width: 280px;
+            font-size: 18px;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .imagen-proyecto {
+            flex: 0 0 300px;
+            max-width: 100%;
+            height: auto;
+            border-radius: 6px;
+            border: 1px solid rgba(0,0,0,0.1);
+            object-fit: cover;
+        }
+
+        @keyframes deslizar {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
 </head>
 <body>
     <header>
         <nav class="topnav" id="myTopnav">
             <img src="../imagenes/Proyecto Arca Logo.png" alt="Proyecto Arca" style="width:75px;height:75px;">
             <a href="Home.html">Home</a>
-            <a href="Landing_Page.html">Adopciones</a>
+            <a href="Landing_Page.html">Donacion</a>
             <a href="Nuestros_Proyectos.html">Nuestros Proyectos</a>
-            <a href="Sobre_Nosotros.html">Sobre Nosotros</a>
+            <a href="Suscribite.html">Suscribite</a>
             <a href="javascript:void(0);" class="icon" onclick="myFunction()">☰</a>
         </nav>
     </header>
+
+    <main class="contenedor-labor">
+        <div class="bloque-presentacion" style="max-width: 1000px;">
+            <div class="texto-presentacion">
+                <h2>Nuestros Proyectos en Marcha</h2>
+                <p>Conocé las iniciativas y campañas activas con las que transformamos el día a día de nuestros rescatados.</p>
+            </div>
+            
+            <ul class="lista-proyectos">
+                
+                <li class="item-proyecto">
+                    <button class="titulo-proyecto" onclick="conmutarProyecto(this)">
+                        Campañas de Vacunación Comunitaria
+                    </button>
+                    <div class="contenido-desplegable">
+                        <div class="cuerpo-proyecto">
+                            <div class="texto-proyecto">
+                                <p>Nuestro objetivo es la salud felina y canina en barrios vulnerables. A través de clínicas móviles y el apoyo de veterinarios solidarios, realizamos vacunaciones gratuitas, concientizando sobre el cuidado responsable y la salud pública.</p>
+                            </div>
+                            <img src="../imagenes/Gatos vacunados.jpg" class="imagen-proyecto" alt="Castraciones">
+                        </div>
+                    </div>
+                </li>
+
+                <li class="item-proyecto">
+                    <button class="titulo-proyecto" onclick="conmutarProyecto(this)">
+                        Rehabilitación de Caballos de Tracción
+                    </button>
+                    <div class="contenido-desplegable">
+                        <div class="cuerpo-proyecto">
+                            <div class="texto-proyecto">
+                                <p>Rescatamos equinos cansados y heridos por el trabajo pesado en las calles. En nuestro predio reciben asistencia veterinaria especializada, descanso en boxes adecuados y la alimentación de alta calidad necesaria para que vuelvan a pastar en libertad y dignidad.</p>
+                            </div>
+                            <img src="../imagenes/Caballo tirando" class="imagen-proyecto" alt="Caballos">
+                        </div>
+                    </div>
+                </li>
+
+                <li class="item-proyecto">
+                    <button class="titulo-proyecto" onclick="conmutarProyecto(this)">
+                        Mejoras Edilicias en Refugios
+                    </button>
+                    <div class="contenido-desplegable">
+                        <div class="cuerpo-proyecto">
+                            <div class="texto-proyecto">
+                                <p>Trabajamos de forma constante en la ampliación de caniles, aislamiento térmico para el invierno y techado de patios para garantizar que todos los perros y gatos rescatados pasen su estadía en un ambiente seguro, seco y confortable mientras esperan su adopción.</p>
+                            </div>
+                            <img src="../imagenes/perros y voluntario.jpg" class="imagen-proyecto" alt="Refugio">
+                        </div>
+                    </div>
+                </li>
+
+                <li class="item-proyecto">
+                    <button class="titulo-proyecto" onclick="conmutarProyecto(this)">
+                        Programa de Madrinas y Padrinos
+                    </button>
+                    <div class="contenido-desplegable">
+                        <div class="cuerpo-proyecto">
+                            <div class="texto-proyecto">
+                                <p>Muchos de nuestros animales rescatados sufren de patologías crónicas o son muy ancianos, lo que dificulta su adopción rápida. A través de este programa, podés convertirte en el padrino o madrina de un residente específico del refugio, cubriendo mensualmente sus gastos de alimentación especial, medicación y brindándole un seguimiento lleno de amor hasta que encuentre un hogar definitivo.</p>
+                            </div>
+                            <img src="../imagenes/padrinos_refugio.png" class="imagen-proyecto" alt="Padrinos de animales">
+                        </div>
+                    </div>
+                </li>
+
+                <li class="item-proyecto">
+                    <button class="titulo-proyecto" onclick="conmutarProyecto(this)">
+                        Atención Veterinaria y Urgencias 24h
+                    </button>
+                    <div class="contenido-desplegable">
+                        <div class="cuerpo-proyecto">
+                            <div class="texto-proyecto">
+                            <p>El rescate de animales en situaciones críticas (accidentes, desnutrición severa o maltrato extremo) requiere una respuesta médica inmediata. Esta campaña permanente está destinada a financiar insumos quirúrgicos, análisis de laboratorio, internaciones de urgencia y la compra de prótesis o tratamientos de alta complejidad que salvan vidas todos los días.</p>
+                            </div>
+                            <img src="../imagenes/atencion_urgencias.jpg" class="imagen-proyecto" alt="Urgencias veterinarias">
+                        </div>
+                    </div>
+                </li>
+
+                <li class="item-proyecto">
+                    <button class="titulo-proyecto" onclick="conmutarProyecto(this)">
+                        Plan de Alimentación Nutricional Colectiva
+                    </button>
+                    <div class="contenido-desplegable">
+                        <div class="cuerpo-proyecto">
+                            <div class="texto-proyecto">
+                                <p>Mantener a más de un centenar de animales con la panza llena y saludable es uno de nuestros mayores desafíos diarios. Con esta iniciativa gestionamos el acopio a gran escala de alimento balanceado para perros y gatos de todas las edades, además de fardos de alfalfa, avena y suplementos vitamínicos específicos para la óptima recuperación de los caballos rescatados.</p>
+                            </div>
+                            <img src="../imagenes/alimentacion_refugio.jpg" class="imagen-proyecto" alt="Alimentación de rescatados">
+                        </div>
+                    </div>
+                </li>
+
+                <li class="item-proyecto">
+                    <button class="titulo-proyecto" onclick="conmutarProyecto(this)">
+                        Campaña Invierno: Refugio Abrigado
+                    </button>
+                    <div class="contenido-desplegable">
+                        <div class="cuerpo-proyecto">
+                            <div class="texto-proyecto">
+                                <p>Las bajas temperaturas son críticas para los animales que se encuentran recuperándose de cirugías o heridas. Lanzamos esta campaña anual para recolectar mantas, colchonetas, capas de abrigo para los equinos y materiales de aislamiento para los techos de los caniles. Tu aporte ayuda a mantener a cada rescatado calentito, seguro y protegido de las heladas.</p>
+                            </div>
+                            <img src="../imagenes/abrigo_invierno.jpg" class="imagen-proyecto" alt="Animales abrigados invierno">
+                        </div>
+                    </div>
+                </li>
+
+            </ul>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2026 Proyecto Arca. Todos los derechos reservados.</p>
+            <p>Hogar y oportunidades a nuestros compañeros animales.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
