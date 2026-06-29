@@ -100,7 +100,7 @@ function donar() {
 
     // 9. Evento del botón Cerrar (Elimina el div de la pantalla)
     botonCerrar.addEventListener("click", function () {
-        nuevoDiv.remove();
+        nuevoDiv.remove(); 
     });
 
     // 10. Evento de simulación "Hacer la donación" con pantalla de agradecimiento
